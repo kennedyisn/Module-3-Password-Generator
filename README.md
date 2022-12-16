@@ -20,7 +20,7 @@ There are no steps needed for installation. Simply click the link and go to the 
 Simply follow the prompts stated by the webpage and you will receive a randomly generated password based on the parameters set by your answers.
 The following screenshot shows the web application's appearance:
 
-[![portfolio demo](./assets/03-javascript-homework-demo.png) 
+[![portfolio demo](Assets/03-javascript-homework-demo.png)
 
 ## Credits
 
