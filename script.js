@@ -9,17 +9,19 @@ var uppercaseAlph = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
 var lowercaseAlph = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 // placeholder for selections made by the user to create their password
 var passwordCriteria = []
+// placeholder for created password
+var generatedPass = "";
 
 function createPassword() {
   // Password length prompt
-  var passwordLengthQ = Number(prompt("How long would you like your password to be? Please select a number between 8 and 128."));
+  var passwordLengthQ = prompt("How long would you like your password to be? Please select a number between 8 and 128.");
   console.log(passwordLengthQ);
 
   // Parsing input from prompt to make sure it is read as a number
   var passwordLength = parseInt(passwordLengthQ)
 
   if (passwordLength <= 7 || passwordLength >= 129) {
-    Number(prompt("Please enter a number between 8 and 128."))
+    prompt("Please enter a number between 8 and 128.")
   } 
 	else {
     console.log('User would like the password length to be' + passwordLength)
@@ -60,6 +62,16 @@ function createPassword() {
     passwordCriteria = passwordCriteria.concat(numSet)
   };
   console.log(passwordCriteria);
+
+  // runs through the selected criteria and randomly generates characters from the string for the password
+  for (var i = 0; i < passwordLength; i++) {
+    var randGenPass = Math.floor(Math.random() * passwordCriteria.passwordLength) + 1
+    // console.log passwordcriteria so that we can call it back and have it show in the secure password section
+    console.log(passwordCriteria[randGenPass])
+    generatedPass = generatedPass + passwordCriteria[randGenPass]
+  }
+  // spits back password to user
+  return generatedPass
 
 }
 
