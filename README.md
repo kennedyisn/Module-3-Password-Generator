@@ -17,7 +17,8 @@ There are no steps needed for installation. Simply click the link and go to the 
 
 ## Usage
 
-Simply follow the prompts stated by the webpage and you will receive a randomly generated password based on the parameters set by your answers.
+Simply follow the prompts stated by the webpage and you will receive a randomly generated password based on the parameters set by your answers. The webpage is accesible using the link below.
+https://kennedyisn.github.io/Module-3-Password-Generator 
 The following screenshot shows the web application's appearance:
 
 ![portfolio demo](Assets/03-javascript-homework-demo.png)
