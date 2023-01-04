@@ -18,7 +18,7 @@ function createPassword() {
   console.log(passwordLengthQ);
 
   // Parsing input from prompt to make sure it is read as a number
-  var passwordLength = parseInt(passwordLengthQ)
+  var passwordLength = +(passwordLengthQ)
 
   if (passwordLength <= 7 || passwordLength >= 129) {
     prompt("Please enter a number between 8 and 128.")
@@ -65,19 +65,22 @@ function createPassword() {
 
   // runs through the selected criteria and randomly generates characters from the string for the password
   for (var i = 0; i < passwordLength; i++) {
-    var randGenPass = Math.floor(Math.random() * passwordCriteria.passwordLength) + 1
+    var randGenPass = Math.floor(Math.random() * passwordCriteria.length)
     // console.log passwordcriteria so that we can call it back and have it show in the secure password section
     console.log(passwordCriteria[randGenPass])
     generatedPass = generatedPass + passwordCriteria[randGenPass]
+    console.log(generatedPass)
   }
   // spits back password to user
   return generatedPass
 
 }
 
+
+
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = createPassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
